@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+}
+
+group 'dev.ojvzinn'
+version '1.0'
+
+repositories {
+    mavenCentral()
+
+    //Repositório Spigot
+    maven {
+        url = 'https://repo.codemc.org/repository/nms/'
+    }
+
+    //Repositório BungeeCord
+    maven {
+        url = 'https://oss.sonatype.org/content/repositories/snapshots'
+    }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+    compileOnly 'org.spigotmc:spigot:1.8.8-R0.1-SNAPSHOT'
+    compileOnly 'net.md-5:bungeecord-api:1.19-R0.1-SNAPSHOT'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks {
+    compileJava {
+        options.encoding("UTF-8")
+    }
+}

@@ -1,0 +1,3 @@
+offPlayer: '§cEsse jogador está offline no momento!'
+teleportSucess: '§aVocê teleportou até o jogador {target} com sucesso!'
+help: '§cUso incorreto! Tente /go [PLAYER].'
