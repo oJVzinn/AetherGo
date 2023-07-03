@@ -26,7 +26,7 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        sendMessage("O plugin inicou com sucesso!");
+        sendMessage("O plugin desligou com sucesso!");
     }
 
     public void sendMessage(String message) {

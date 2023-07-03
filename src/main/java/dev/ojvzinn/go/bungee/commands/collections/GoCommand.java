@@ -23,6 +23,11 @@ public class GoCommand extends Commands {
 
         ProxiedPlayer player = (ProxiedPlayer) sender;
 
+        if (!player.hasPermission("aethergo.cmd.go")) {
+           player.sendMessage(TextComponent.fromLegacyText("§cVocê não possui permissão para utilizar isso!"));
+           return;
+        }
+
         if (args.length < 1) {
             player.sendMessage(TextComponent.fromLegacyText(Bungee.getInstance().getConfig("config").getString("help")));
             return;
